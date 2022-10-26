@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
+#main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#timer-container {
+    background-color: #e63946;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+
+.whitespace {
+
+}
