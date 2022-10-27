@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     width: 100%;
+    max-width: none;
 }
 
 #timer-container {
@@ -16,5 +17,5 @@
 }
 
 .whitespace {
-
+    background-color: gray;
 }
