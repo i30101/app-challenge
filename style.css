@@ -11,6 +11,13 @@ body {
 
 }
 
+.img{
+    padding:20px;
+}
+
+.about-text{
+    padding:50px;
+}
 #main {
     padding: 0;
     margin: 0;
@@ -25,6 +32,17 @@ body {
 /* .whitespace {
     background-color: grey;
 } */
+
+#about{
+    padding:50px;;
+    margin:auto;
+}
+
+#about-content{
+    padding:20px;
+    margin:auto;
+}
+
 
 #timer-container {
     margin: 0;
@@ -45,6 +63,7 @@ body {
     text-align: center;
     border-radius: 10px;
 }
+
 
 #time {
     font-size: 100px;
