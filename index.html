@@ -42,19 +42,17 @@
                 <div class="container" id="timer">
                     <h3 id="timer-message">Time to study!</h3>
                     <h1 id="time">25:00</h1>
-                    <button type="button" class="time-toggle" id="previous">
-                        <span class="material-symbols-outlined toggle-icon">skip_previous</span>
-                    </button>
-                    <button type="button" onclick="printDuration()" class="time-toggle" id="play">
-                        <span class="material-symbols-outlined toggle-icon">play_arrow</span>
-                    </button>
-                    <button type="button" class="time-toggle" id="next">
-                        <span class="material-symbols-outlined toggle-icon">skip_next</span>
-                    </button>
-                    <button type="button" onclick="stop()" class="time-toggle" id="stop">
-                        <span class="material-symbols-outlined toggle-icon">stop</span>
-                    </button>
-
+                    <div class="container" id="toggle-container">
+                        <button type="button" onclick="reset()" class="time-toggle" id="reset">
+                            <span class="material-symbols-outlined toggle-icon">skip_previous</span>
+                        </button>
+                        <button type="button" onclick="printDuration()" class="time-toggle" id="play">
+                            <span class="material-symbols-outlined toggle-icon">play_arrow</span>
+                        </button>
+                        <button type="button" onclick="next()" class="time-toggle" id="next">
+                            <span class="material-symbols-outlined toggle-icon">skip_next</span>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div class="col-md-3 d-none d-md-block d-xs-none d-sm-none whitespace"></div>
@@ -66,13 +64,22 @@
             <h1 id="info-title">Benefits of Timed Study</h1>
             <div class="row" id="info-boxes">
                 <div class="col-xs-12 col-sm-12 col-md-4 info-col" id="did-you-know">
-                    <h3 class="info-title">test</h3>
+                    <h3 class="info-title">BENEFIT 1</h3>
+                    <div class="benefits-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam perspiciatis sunt voluptates et eveniet unde beatae corrupti dolore consequatur exercitationem odio soluta vitae, atque facilis optio sapiente temporibus adipisci repellendus.
+                    </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 info-col" id="did-you-know">
-                    <h3 class="info-title">test</h3>
+                    <h3 class="info-title">BENEFIT 2</h3>
+                    <div class="benefits-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam perspiciatis sunt voluptates et eveniet unde beatae corrupti dolore consequatur exercitationem odio soluta vitae, atque facilis optio sapiente temporibus adipisci repellendus.
+                    </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 info-col" id="did-you-know">
-                    <h3 class="info-title">test</h3>
+                    <h3 class="info-title">BENEFIT 3</h3>
+                    <div class="benefits-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam perspiciatis sunt voluptates et eveniet unde beatae corrupti dolore consequatur exercitationem odio soluta vitae, atque facilis optio sapiente temporibus adipisci repellendus.
+                    </div>
                 </div>
             </div>
         </div>
