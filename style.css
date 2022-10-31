@@ -1,5 +1,4 @@
 /* GENERAL STYLES */
-
 * {
     box-sizing: border-box;
 }
@@ -12,15 +11,19 @@
     color: #588157 !important;
 }
 
+.border-bottom {
+    border-bottom: 1px solid #588157 !important;
+}
+
+#copyright{
+    color: #588157 !important;
+}
+
 body {
     background-color: #a3b18a;
     color: #fefae0;
-
 }
 
-.border-bottom {
-    border-bottom: 1px solid #3a5a40 !important;
-}
 
 
 /* INDEX STYLES */
@@ -31,7 +34,7 @@ body {
     max-width: none;
 }
 
-#timer-box {
+#timebox {
     margin: 5% auto;
     padding: 20px;
     width: 90%;
@@ -42,14 +45,30 @@ body {
 }
 
 .timer-col {
-    margin: auto;
+    margin: 20px auto 0 auto;
     padding: 0;
 }
 
+#time-message {
+    margin-bottom: -15px;
+    font-size: 25px;
+    font-weight: 490;
+}
+
 #time {
-    margin: auto;
-    width: 300px;
+    margin: auto auto 0 auto;
+    width: 240px;
+    height: 120px;
     font-size: 100px;
+    font-weight: 480;
+}
+
+#time-total {
+    margin: auto;
+    width: 100px;
+    color: #3a5a40;
+    font-size: 25px;
+    font-weight: 400;
 }
 
 .time-toggle {

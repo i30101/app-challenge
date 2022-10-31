@@ -4,6 +4,14 @@ let check = null;
 let cnt = 1500;
 let second, minute;
 
+function played() {
+    play.innerHTML = `<span class="material-symbols-outlined toggle-icon">pause</span>`;
+}
+
+function paused() {
+    play.innerHTML = `<span class="material-symbols-outlined toggle-icon">play_arrow</span>`;
+}
+
 function updateTime() {
     second = cnt % 60;
     minute = Math.floor(cnt / 60) % 60;
@@ -16,7 +24,7 @@ function updateTime() {
 function printDuration() {
 
     if (check == null) {
-        play.innerHTML = `<span class="material-symbols-outlined toggle-icon">pause</span>`;
+        played();
 
         check = setInterval(function () {
             cnt -= 1;
@@ -30,7 +38,7 @@ function printDuration() {
         }, 1000);
     }else {
         stop();
-        play.innerHTML = `<span class="material-symbols-outlined toggle-icon">play_arrow</span>`;
+        paused();
     }
 }
 
@@ -43,5 +51,6 @@ function stop() {
 function reset() {
     clearInterval(check);
     cnt = 1500;
+    paused();
     updateTime();
 }

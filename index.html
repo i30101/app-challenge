@@ -36,22 +36,20 @@
     </nav>
 
     <div class="container" id="main">
-        <div class="row" id="timer-box">
-            <div class="col-xs-12 col-sm-12 col-md-12 timer-col"><h3 id="timer-message">Time to study!</h3></div>
-            <div class="col-xs-12 col-sm-12 col-md-6 timer-col"><h1 id="time">25:00</h1></div>
-            <!-- <div class="col-xs-12 col-sm -12 col-md-2 timer-col"><h4 id="time-total">/25:00</h4></div> -->
-            <div class="col-xs-12 col-sm-12 col-md-12 timer-col">
-                <div class="container" id="toggle-container">
-                    <button type="button" onclick="reset()" class="time-toggle" id="reset">
-                        <span class="material-symbols-outlined toggle-icon">skip_previous</span>
-                    </button>
-                    <button type="button" onclick="printDuration()" class="time-toggle" id="play">
-                        <span class="material-symbols-outlined toggle-icon">play_arrow</span>
-                    </button>
-                    <button type="button" onclick="next()" class="time-toggle" id="next">
-                        <span class="material-symbols-outlined toggle-icon">skip_next</span>
-                    </button>
-                </div>
+        <div class="container" id="timebox">
+            <div class="timer-col" id="time-message">Time to study!</div>
+            <div class="timer-col" id="time">25:00</div>
+            <div class="timer-col" id="time-total">/25:00</div>
+            <div class="timer-col" id="toggle-container">
+                <button type="button" onclick="reset()" class="time-toggle" id="reset">
+                    <span class="material-symbols-outlined toggle-icon">skip_previous</span>
+                </button>
+                <button type="button" onclick="printDuration()" class="time-toggle" id="play">
+                    <span class="material-symbols-outlined toggle-icon">play_arrow</span>
+                </button>
+                <button type="button" onclick="next()" class="time-toggle" id="next">
+                    <span class="material-symbols-outlined toggle-icon">skip_next</span>
+                </button>
             </div>
         </div>
 
