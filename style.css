@@ -98,6 +98,10 @@ body {
     font-size: 30px;
 }
 
+#did-you-know {
+    margin: auto;
+}
+
 #info-container {
     margin: auto;
     padding: 20px;
