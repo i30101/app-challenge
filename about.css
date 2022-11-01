@@ -1,0 +1,36 @@
+#about-title {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.bio-box {
+    padding: 20px;
+    margin: 5%;
+    width: 90%;
+    background-color: #dda15e;
+    border-radius: 8px;
+}
+
+.name {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.img-container {
+    margin: 2%;
+    width: 32%;
+}
+
+img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.text-box {
+    padding: 10px;
+    margin: 2%;
+    max-width: 60%;
+}
