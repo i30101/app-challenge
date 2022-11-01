@@ -1,12 +1,6 @@
-#info-container {
-    margin: auto;
-    padding: 20px;
-    max-width: 100%;
-}
-
 .info-col {
-    margin: 5%;
-    width: 90%;
+    margin: 3%;
+    width: 94%;
     position: relative;
     background-color: #dda15e;
     border-radius: 8px;
