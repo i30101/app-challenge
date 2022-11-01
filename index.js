@@ -51,13 +51,11 @@ function stop() {
 
 function reset(wasClicked) {
     if(round == "study") {
-        console.log("you are now on break");
         round = "break";
         total.innerHTML = "/5:00";
         message.innerHTML = "Get up and walk around!";
         count = breakTime;
     }else {
-        console.log("you are now on study");
         round = "study";
         total.innerHTML = "/25:00";
         message.innerHTML = "Time to study!";
@@ -76,8 +74,5 @@ function reset(wasClicked) {
 function changeRound() {
     if(count === 0) {
         reset();
-        console.log(`you are now ${round}ing`);
-    }else {
-        console.log(`${round} time, ${count} seconds left`);
     }
 }
