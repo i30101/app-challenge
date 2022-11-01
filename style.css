@@ -16,6 +16,13 @@ body {
     color: #fefae0;
 }
 
+.secondary-title {
+    margin-top: auto;
+    padding: 60px 0 0 0;
+    text-align: center;
+    color: #344e41;
+}
+
 .border-bottom {
     border-bottom: 1px solid #588157 !important;
 }
