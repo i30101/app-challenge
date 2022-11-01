@@ -1,56 +1,83 @@
 let time = document.getElementById("time");
 let play = document.getElementById("play");
+let message = document.getElementById("time-message");
+let total = document.getElementById("time-total");
 let check = null;
-let cnt = 1500;
+let studyTime = 1500;
+let breakTime = 300;
+let count = studyTime;
 let second, minute;
+let round = "study";
 
-function played() {
+// sets button to play
+function buttonIsPlay() {
     play.innerHTML = `<span class="material-symbols-outlined toggle-icon">pause</span>`;
 }
 
-function paused() {
+// sets button to pause
+function buttonIsPause() {
     play.innerHTML = `<span class="material-symbols-outlined toggle-icon">play_arrow</span>`;
 }
 
+// updates time
 function updateTime() {
-    second = cnt % 60;
-    minute = Math.floor(cnt / 60) % 60;
-    minute = (minute > 59) ? minute = 59 : minute = minute;
+    second = count % 60;
+    minute = Math.floor(count / 60) % 60;
+    minute = (minute > 59) ? minute = 59 : minute;
     second = (second < 10) ? '0'+second : second;
     minute = (minute < 10) ? '0'+minute : minute;
     time.innerHTML = `${minute}:${second}`;
 }
 
+// prints the duration
 function printDuration() {
-
-    if (check == null) {
-        played();
-
+    if (check === null) {
+        buttonIsPlay();
         check = setInterval(function () {
-            cnt -= 1;
-            // second = cnt % 60;
-            // minute = Math.floor(cnt / 60) % 60;
-            // minute = (minute > 59) ? minute = 59 : minute = minute;
-            // second = (second < 10) ? '0'+second : second;
-            // minute = (minute < 10) ? '0'+minute : minute;
-            // time.innerHTML = `${minute}:${second}`;
+            count -= 1;
             updateTime();
-        }, 1000);
+            changeRound();
+        }, 1);
     }else {
         stop();
-        paused();
+        buttonIsPause();
     }
 }
 
 function stop() {
     clearInterval(check);
     check = null;
-    // time.innerHTML = '0';
 }
 
-function reset() {
+function reset(wasClicked) {
+    if(round == "study") {
+        console.log("you are now on break");
+        round = "break";
+        total.innerHTML = "/5:00";
+        message.innerHTML = "Get up and walk around!";
+        count = breakTime;
+    }else {
+        console.log("you are now on study");
+        round = "study";
+        total.innerHTML = "/25:00";
+        message.innerHTML = "Time to study!";
+        count = studyTime;
+    }
     clearInterval(check);
-    cnt = 1500;
-    paused();
-    updateTime();
+    buttonIsPause();
+    stop();
+    if(wasClicked) {
+        updateTime();
+    }else {
+        printDuration();
+    }
+}
+
+function changeRound() {
+    if(count === 0) {
+        reset();
+        console.log(`you are now ${round}ing`);
+    }else {
+        console.log(`${round} time, ${count} seconds left`);
+    }
 }

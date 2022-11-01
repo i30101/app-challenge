@@ -3,12 +3,17 @@
     box-sizing: border-box;
 }
 
-.navbar-brand {
+.navbar-brand, .navbar-brand:active, .navbar-brand:hover {
     color: #3a5a40
 }
 
 .nav-link {
     color: #588157 !important;
+}
+
+body {
+    background-color: #a3b18a;
+    color: #fefae0;
 }
 
 .border-bottom {
@@ -19,7 +24,3 @@
     color: #588157 !important;
 }
 
-body {
-    background-color: #a3b18a;
-    color: #fefae0;
-}
