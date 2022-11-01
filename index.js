@@ -37,7 +37,7 @@ function printDuration() {
             count -= 1;
             updateTime();
             changeRound();
-        }, 1);
+        }, 1000);
     }else {
         stop();
         buttonIsPause();
